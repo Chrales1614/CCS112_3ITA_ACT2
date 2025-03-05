@@ -1,17 +1,33 @@
-import React from "react";
+import React, { Component } from 'react';
 
 
-const Product = ({ product, onAddToCart }) => {
-  return (
-    <div>
-      <h3>{product.name}</h3>
-      <p>Price: ₱{product.price}</p>
-      <img src={product.image} alt={product.name} width="100" />
-      <br />
-      <button onClick={() => onAddToCart(product)}>Add to Cart</button>
-    </div>
-  );
-};
+class Product extends Component {
+  render() {
+    const { product, onAddToCart } = this.props;
+    const { id, name, price, image } = product;
+
+
+    return (
+      <div className="product-card">
+        <img 
+          src={`/api/placeholder/300/200?text=${name}`} 
+          alt={name} 
+          className="product-image"
+        />
+        <div className="product-details">
+          <h3>{name}</h3>
+          <p>${price.toFixed(2)}</p>
+          <button 
+            className="add-to-cart-btn"
+            onClick={() => onAddToCart(product)}
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    );
+  }
+}
 
 
 export default Product;
