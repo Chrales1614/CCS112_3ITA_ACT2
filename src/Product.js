@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 
-
 class Product extends Component {
   render() {
     const { product, onAddToCart } = this.props;
     const { id, name, price, image } = product;
 
-
     return (
       <div className="product-card">
         <img 
-          src={`/api/placeholder/300/200?text=${name}`} 
+          src={`https://via.placeholder.com/300x200?text=${name}`} 
           alt={name} 
           className="product-image"
         />
@@ -28,6 +26,5 @@ class Product extends Component {
     );
   }
 }
-
 
 export default Product;
