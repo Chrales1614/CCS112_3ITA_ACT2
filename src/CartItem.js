@@ -6,7 +6,7 @@ const CartItem = ({ item, onRemoveFromCart }) => {
     <div>
       <h4>{item.name}</h4>
       <p>Price: ₱{item.price} | Quantity: {item.quantity}</p>
-      <button onClick={() => onRemoveFromCart(item.id)}>Remove</button>
+      <button onClick={() => onRemoveFromCart(item.productId)}>Remove</button>
     </div>
   );
 };
