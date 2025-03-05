@@ -13,7 +13,8 @@ class App extends Component {
         { id: 1, name: 'Laptop', price: 999.99, image: 'laptop.jpg' },
         { id: 2, name: 'Smartphone', price: 599.99, image: 'phone.jpg' },
         { id: 3, name: 'Headphones', price: 199.99, image: 'headphones.jpg' },
-        { id: 4, name: 'Smart Watch', price: 249.99, image: 'watch.jpg' }
+        { id: 4, name: 'Smart Watch', price: 249.99, image: 'watch.jpg' },
+        { id: 5, name: 'Mouaw', price: 289.99, image: 'mouse.jpg'}
       ],
       cartItems: [],
       searchTerm: ''
